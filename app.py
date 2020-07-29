@@ -139,4 +139,8 @@ def upload():
                 os.system("wget  --no-check-certificate -r 'https://docs.google.com/uc?export=download&id="+lin[no+2]+"' -O '"+lin[no+2]+".mp4'")
             else:
                 #error
-        
+                pass
+
+@app.route('/editing', methods=['GET', 'POST'])
+def editing():
+    return render_template("videoeditor.html")

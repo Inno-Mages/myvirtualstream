@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Dashboard- Video Editor</title>
+    <link rel="stylesheet" href="style_videoeditor.css">
+</head>
+
+<div class="videos">
+    <div class="thumnail">
+        <video width="360px" controls>
+            <source src="videos/103419456_136868234650688_2029296699229308621_n.mp4" type="video/mp4">
+            <source src="videos/103419456_136868234650688_2029296699229308621_n.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="tools">
+        <div class="header_tools">
+            Mujhko Yaad Sataye Teri.mp4
+        </div>
+        <form class="main_tools" action="/action_page.php">
+            <div class="subhead_main_tools">
+                Click to Select
+            </div>
+            <div class="form-inline">
+                <label for="noise">Remove Noise</label
+                ><input type="checkbox" id="noise" name="noise" value="remove_noise"
+                ><label for="landscape">Make portrait to Landscape</label
+                ><input type="checkbox" id="landscape" name="landscape" value="portrait_to_landscape">
+            </div>
+            <label for="repotinglocation">Reporting Location: </label>
+            <input type="text" id="reportinglocation" name="reportinglocation"><br>
+            <div class="subhead_main_tools">
+                Recommended Options For Visuals
+            </div>
+            <div class="form-inline">
+                <form action="" method="post" enctype="multipart/form-data">
+                    Select External Audio File
+                    <div class="upload_button">
+                        <input type="file" name="extAudioToUpload" id="extAudioToUpload">
+                    </div>
+                </form>
+
+                <label for="removeaudio">Remove Default Audio</label
+                ><input type="checkbox" id="removeaudio" name="removeaudio" value="remove_deafault_audio">
+
+                <form action="" method="post" enctype="multipart/form-data">
+                    Select Background Music File
+                    <div class="upload_button">
+                        <input type="file" name="backmusic" id="back_music">
+                    </div>
+                </form>
+            </div>
+            <label for="sync">Sync Visual with External Audio </label
+            ><input type="checkbox" id="sync" name="sync" value="sync_audio">
+            <div class="subhead_main_tools">
+                Recommended Options For Bits
+            </div>
+            <label for="speakername">Speaker Name/ Relation: </label>
+            <input type="text" id="speakername" name="speakername"><br>
+        </form>
+    </div>
+</div>

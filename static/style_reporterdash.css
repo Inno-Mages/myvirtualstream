@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #F5F6F8;
+}
+
+.nav-container {
+    background-color: rgba(255, 255, 255, 0.822);
+    position: static;
+    height: 40px;
+    font-size: x-large;
+    font-family: monospace;
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1) ;
+    color: rgb(86, 86, 170);
+    line-height: 35px;
+}
+
+.mainpage {
+    /* kuch aana ho to yahan aa skta he*/
+}
+
+.total_videos_uploaded {
+    position: relative;
+    width: unset;
+    height: 424px;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 15px rgb(86, 86, 170);
+    padding: 25px;
+    margin: 20px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1) ;
+}
+
+.header_total_videos_uploaded {
+    position: relative;
+    left: 0%;
+    right: 14.83%;
+    top: 0%;
+    bottom: 0%;
+}
+.heading_total_videos_uploaded {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: x-large;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    display: inline-block;
+    color: #192A3E;
+}
+.months_total_videos_uploaded {
+    float: right;
+}
+
+.main_total_videos_upload {
+ /* kuch aana ho to yahan aa skta he*/
+}
+
+.types_total_videos_uploaded {
+    position: relative;
+    width: auto;
+    height: auto;
+    left: 12%;
+    top: 8%;
+    display: inline-block;
+}
+
+.types_total_videos_uploaded_legend {
+    position: relative;
+    object-position: 70%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: right;
+    margin-right: auto;
+    top: 30%;
+    right: 35%;
+}
+
+.legends {
+    color: black;
+    text-decoration-line: none;
+    line-height: 150%;
+}
+
+.upload_videos {
+    position: relative;
+    width: unset;
+    height: 500px;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 15px rgb(86, 86, 170);
+    padding: 25px;
+    margin: 20px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1) ;
+}
+
+.header_upload_videos {
+    position: relative;
+    left: 0%;
+    right: 14.83%;
+    top: 0%;
+    bottom: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: xx-large;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+}
+
+
+
+.upload_button {
+    background-color: #109CF1; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.submit_button {
+    background-color: #109CF1; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}

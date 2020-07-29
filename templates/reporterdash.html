@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_reporterdash.css">
+</head>
+<body>
+    <div class="nav-container">
+        My Virtual Stream
+    </div>
+    <div class="mainpage">
+        <div class="total_videos_uploaded">
+            <div class="header_total_videos_uploaded">
+                <div class="heading_total_videos_uploaded">
+                    Total Videos Uploaded
+                </div>
+
+                <div class="months_total_videos_uploaded">
+                    Show: 
+                </div>
+            </div>
+            <div class="main_total_videos_upload">
+                <div class="types_total_videos_uploaded">
+                    <div class="pie_chart">
+                        <img src="images/Group 1.svg" alt="pie chart representation">
+                        <!--Here via java script total no. of videos will appear-->
+                    </div>
+                </div>
+
+                <ul class="types_total_videos_uploaded_legend">
+                    <li>
+                        <a class="legends" href="#">Under Review</a>
+                    </li>
+                    <li>
+                        <a class="legends" href="#">Published</a>
+                    </li>
+                    <li>
+                        <a class="legends" href="#">Declined</a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+        <div class="upload_videos">
+            <div class="header_upload_videos">
+                Upload Files
+            </div>
+
+            <!-- This will be area where the status of the uploaded video(s) will be shown-->
+            <div class="area_upload_videos">
+            </div>
+
+            <div class="Select_file_button">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Select video to upload:
+                    <div class="upload_button">
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                    </div>
+                    <div class="submit_button">
+                        <input type="submit" value="Submit" name="submit">
+                    </div>
+                </form>
+            </div>
+
+            <div class="upload_link_button">
+                Upload File From Link below
+            </div>
+
+            <!-- This will grab the link and clicking on "upload_link_button" will send the link to upload video
+            in "area_upload_videos"-->
+            <div class="link_grabber">
+                <form action="">
+                    <input type="text" id="link" name="link"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js_reporterdash.js"></script>
+</body>
+</html>
