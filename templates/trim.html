@@ -17,23 +17,26 @@
                 Trim / Sequence the Videos
             </div>
         </div>
+        {% set select = [] %}
+        {% for n in range(num) %}
+        {% for data in d %}
+        {% if data.1 == n %}
+        {% set names = data.0.split('/') %}
         <div class="main_trimmer">
             <div class="trimmer_videos">
                 <div class="thumbnail">
                     <video class="vidplayer" width="360px" controls>
-                        <source src="videos/103419456_136868234650688_2029296699229308621_n.mp4" type="video/mp4">
-                        <source src="videos/103419456_136868234650688_2029296699229308621_n.mp4" type="video/ogg">
+                        <source src="{{data.0}}" type="video/mp4">
+                        <source src="{{data.0}}" type="video/ogg">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="trimmer_tools">
                     <div class="header_trimmer_tools">
-                        Mujhko Yaad Sataye Teri.mp4
+                        {{names.2}}
                     </div>
-                    <div class="subhead_trimmer_tools">
-                        2.40mb
-                    </div>
-                    <form class="main_trimmer_tools" action="">
+                    <form class="main_trimmer_tools" action="/trim">
+                        <input type="hidden" id="formname" name = "formname" value="{{names.2}}">
                         <div class="form-inline">
                             <div class="header_form-inline">
                                 Trim Video
@@ -46,37 +49,56 @@
                                 </div>
                                 <br>
                                 <div class="end_trim_time">
-                                    Select end time: <input type="number" min="0" max="59" step="1" name="s_minute">
+                                    Select end time: <input type="number" min="0" max="59" step="1" name="e_minute">
                                     :
-                                    <input type="number" min="0" max="59" step="1" name="s_seconds">
+                                    <input type="number" min="0" max="59" step="1" name="e_seconds">
                                 </div>
+                                <button class="button button1" type="submit">Trim</button>
                             </div>
+                        </form>
                             <div class="click_to_select">
-                                <input type="checkbox" id="select" name="select" value="clicktoselect" checked>
+                            <input type="checkbox" id="{{names.2}}" name="{{names.2}}" value="clicktoselect" onclick="{{example('{{names.2}}')}}">
                                 <label for="select">Click to Select</label>
                             </div>
                             
                         </div>
                         
-                    </form>
                 </div>
                 <div class="sequencer">
                     <div class="sequence_button">
                         SEQUENCE
-                        <img src="images/Vector.svg" onclick="up()" >
-                        <img src="images/Nav-Arrow 1.svg" onclick="down()" >
+                        <form class="main_trimmer_tools" action="/up">
+                            <input type="hidden" id="formname" name = "formname" value="{{names.2}}">
+                            <input type="image" src="images/Vector.svg" border="0" alt="Submit" />
+                        </form>
+                        <form class="main_trimmer_tools" action="/up">
+                            <input type="hidden" id="formname" name = "formname" value="{{names.2}}">
+                            <input type="image" src="images/Vector.svg" border="0" alt="Submit" />
+                        </form>
                     </div> 
                     <br>
                     <div class="sequence_box">
-                        <input type="number" placeholder="" min="1" max="12" step="1" name="sequencebox">
+                        <form class="main_trimmer_tools" action="/seq">
+                        <input type="hidden" id="formname" name = "formname" value="{{names.2}}">
+                        <input type="number" placeholder="" min="1" max="{{num}}" step="1" name="sequencebox" id="sequencebox">
+                        <button class="button button1" type="submit">Change</button>
+                        </form>
                     </div>
                 </div>
             </div>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
             <div class="buttons">
-                <button onclick="" class="button button1">Go To MyVirtualEditor</button>
-                <button onclick="" class="button button2">Delete Selected Files</button>
+                <form class="main_trimmer_tools" action="/delsel">
+                <button class="button button2">Delete Selected Files</button>
+                </form>
+                <form class="main_trimmer_tools" action="/upload">
                 <button onclick="" class="button button3">Upload More Files</button>
+            </form>
+                <form class="main_trimmer_tools" action="/editing"></form>
                 <button onclick="" class="button button4">Send Selected Files for Editing</button>
+            </form>
             </div>
             
         </div>
