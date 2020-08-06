@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Virtual Stream - Video Trimmer and Sequencer</title>
+    <link rel="stylesheet" href="style_trim.css">
+</head>
+<body>
+    <div class="nav-container">
+        My Virtual Stream - Video Trimmer
+    </div>
+    <div class="mainpage">
+        <div class="header_mainpage">
+            <div class="heading_mainpage">
+                Trim / Sequence the Videos
+            </div>
+        </div>
+        <div class="main_trimmer">
+            <div class="trimmer_videos">
+                <div class="thumbnail">
+                    <video class="vidplayer" width="360px" controls>
+                        <source src="videos/103419456_136868234650688_2029296699229308621_n.mp4" type="video/mp4">
+                        <source src="videos/103419456_136868234650688_2029296699229308621_n.mp4" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="trimmer_tools">
+                    <div class="header_trimmer_tools">
+                        Mujhko Yaad Sataye Teri.mp4
+                    </div>
+                    <div class="subhead_trimmer_tools">
+                        2.40mb
+                    </div>
+                    <form class="main_trimmer_tools" action="">
+                        <div class="form-inline">
+                            <div class="header_form-inline">
+                                Trim Video
+                            </div>
+                            <div class="trim_time">
+                                <div class="start_trim_time">
+                                    Select start time: <input type="number" min="0" max="59" step="1" name="s_minute" placeholder="00">
+                                    :
+                                    <input type="number" min="0" max="59" step="1" name="s_seconds" placeholder="00">
+                                </div>
+                                <br>
+                                <div class="end_trim_time">
+                                    Select end time: <input type="number" min="0" max="59" step="1" name="s_minute">
+                                    :
+                                    <input type="number" min="0" max="59" step="1" name="s_seconds">
+                                </div>
+                            </div>
+                            <div class="click_to_select">
+                                <input type="checkbox" id="select" name="select" value="clicktoselect" checked>
+                                <label for="select">Click to Select</label>
+                            </div>
+                            
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="sequencer">
+                    <div class="sequence_button">
+                        SEQUENCE
+                        <img src="images/Vector.svg" onclick="up()" >
+                        <img src="images/Nav-Arrow 1.svg" onclick="down()" >
+                    </div> 
+                    <br>
+                    <div class="sequence_box">
+                        <input type="number" placeholder="" min="1" max="12" step="1" name="sequencebox">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="" class="button button1">Go To MyVirtualEditor</button>
+                <button onclick="" class="button button2">Delete Selected Files</button>
+                <button onclick="" class="button button3">Upload More Files</button>
+                <button onclick="" class="button button4">Send Selected Files for Editing</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
